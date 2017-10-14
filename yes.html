@@ -31,8 +31,7 @@
 <div>
         <ul class="icons">
           <h2>You voted No!</h2>
-          <p>X people agree with you.</p>
-          <p>X people disagree with you.</p>
+
         </ul>
 </div>
       </section>
@@ -40,4 +39,14 @@
       </section>
     </div>
 </head>
+<script>
+    $.ajax({
+  url: "https://rocky-lowlands-25382.herokuapp.com/yes",
+  cache: false,
+  success: function(html){
+    $("#results").append(html);
+  }
+});
+</script>
+
 </html>
